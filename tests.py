@@ -30,7 +30,7 @@ class TestPPSData(unittest.TestCase):
         
         DRGList = list()  
 
-        tbl = PpsDataTable.query.limit(10).all()
+        tbl = PpsDataTable.query.limit(50).all()
 
         for row in tbl:
             DRG_mod = ''
@@ -88,7 +88,7 @@ class TestPPSData(unittest.TestCase):
         
         procedureList = list()  
 
-        tbl = PpsDataTable.query.limit(10).all()
+        tbl = PpsDataTable.query.limit(50).all()
 
         for row in tbl:
             p = Procedure(
@@ -194,9 +194,9 @@ class TestPPSData(unittest.TestCase):
                 #add it to the list of existing providers so we dont re-add it
                 existing_providers.append(newprovider)
              
-             
+
     def test_SQLAlchemy_setup(self):
-        tbl = PpsDataTable.query.limit(10).all()
+        tbl = PpsDataTable.query.limit(50).all()
 
         for row in tbl:
             self.assertTrue(row.DRG_Definition)

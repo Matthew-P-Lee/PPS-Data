@@ -4,10 +4,10 @@
   {{ super() }}
 {% endblock %}
 {% block content %}
-  	<h2>Procedure List</h2>
+  	<h2>DRG List</h2>
     <ul>
-	    {% for p in procedures %}
-	        <li><a href='/procedure/{{ p.id }}'>{{ p.DRG.DRG_Definition }},{{ p.Provider.Provider_Name }}</li></a>
+	    {% for d in drg %}
+	        <li><a href='/drg/{{ d.DRG_Id }}'>{{ d.DRG_Definition }}</li></a>
 	    {% endfor %}
     </ul>
 {% endblock %}

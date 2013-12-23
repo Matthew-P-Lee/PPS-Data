@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Provider Detail{% endblock %}
+{% block head %}
+  {{ super() }}
+{% endblock %}
+{% block content %}
+	<h2>DRG Detail</h2>
+    <ul>
+    	<li>{{ DRG.DRG_Definition }}</li>
+    </ul>
+    <h2>Facilities performing this procedure</h2>
+    <ul>
+    {% for p in drg.Procedures %}
+    <li>{{p.DRG.DRG_Definition}}</li>
+    {% endfor %}
+	</ul>
+{% endblock %}

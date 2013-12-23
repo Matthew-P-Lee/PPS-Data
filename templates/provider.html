@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}Provider Detail{% endblock %}
+{% block head %}
+  {{ super() }}
+{% endblock %}
+{% block content %}
+	<h2>Provider Detail</h2>
+    <ul>
+    	<li>{{ provider.Provider_Id }}</li>
+   		<li>{{ provider.Provider_Name }}</li>
+    	<li>{{ provider.Provider_Street_Address}}</li>
+    	<li>{{ provider.Provider_City }}, {{ provider.Provider_State }} {{ provider.Provider_Zip_Code }}</li>
+    </ul>
+    <h2>Procedures for this Facility</h2>
+    <ul>
+    {% for p in provider.Procedures %}
+    <li>{{p.DRG.DRG_Definition}}</li>
+    {% endfor %}
+	</ul>
+{% endblock %}
