@@ -2,8 +2,8 @@ import boto
 import os
 
 # Fill these in - you get them when you sign up for S3
-AWS_ACCESS_KEY_ID = 'AKIAIUHMTMNCIAHE5V6Q'
-AWS_SECRET_ACCESS_KEY = '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'
+AWS_ACCESS_KEY_ID = ''
+AWS_SECRET_ACCESS_KEY = ''
 
 bucket_name = AWS_ACCESS_KEY_ID.lower() + '-vistaseeker.com'
 
